@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign In | CryptoVault</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="auth">
+
+        <header class="auth-brand">
+            <span class="brand-mark" aria-hidden="true">CV</span>
+            <h1>CryptoVault</h1>
+            <p>Your secure gateway to the world of cryptocurrency trading and portfolio management.</p>
+            <ul class="auth-points">
+                <li>Bank-grade security with 2FA protection</li>
+                <li>Real-time market data and analytics</li>
+                <li>Multi-wallet support with staking rewards</li>
+            </ul>
+        </header>
+
+        <main class="auth-main">
+            <div class="theme-corner">
+                <label for="theme-toggle">Light mode</label>
+                <input class="switch" type="checkbox" id="theme-toggle" role="switch">
+            </div>
+
+            <form class="auth-form" action="index.html" method="get">
+                <h2>Welcome Back</h2>
+                <p>Enter your credentials to access your account.</p>
+
+                <nav aria-label="Account forms">
+                    <ul class="auth-tabs">
+                        <li><a class="tab" href="signin.html" aria-current="page">Sign In</a></li>
+                        <li><a class="tab" href="signup.html">Sign Up</a></li>
+                    </ul>
+                </nav>
+
+                <div class="field">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email"
+                        required>
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" minlength="8"
+                        autocomplete="current-password" required>
+                </div>
+
+                <div class="row-between">
+                    <label class="check" for="remember">
+                        <input type="checkbox" id="remember" name="remember">
+                        Remember me
+                    </label>
+                    <a class="text-link" href="#">Forgot password?</a>
+                </div>
+
+                <button class="btn" type="submit">Sign In</button>
+
+                <p class="divider">or continue with</p>
+
+                <div class="social">
+                    <button class="btn btn-ghost" type="button">Google</button>
+                    <button class="btn btn-ghost" type="button">Apple</button>
+                </div>
+
+                <p class="auth-switch">Don't have an account? <a class="text-link" href="signup.html">Sign up for
+                        free</a></p>
+            </form>
+        </main>
+    </div>
+</body>
+
+</html>

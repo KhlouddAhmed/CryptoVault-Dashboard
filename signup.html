@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up | CryptoVault</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="auth">
+
+        <header class="auth-brand">
+            <span class="brand-mark" aria-hidden="true">CV</span>
+            <h1>CryptoVault</h1>
+            <p>Create your free account and start managing your crypto portfolio in minutes.</p>
+            <ul class="auth-points">
+                <li>Bank-grade security with 2FA protection</li>
+                <li>Real-time market data and analytics</li>
+                <li>Multi-wallet support with staking rewards</li>
+            </ul>
+        </header>
+
+        <main class="auth-main">
+            <div class="theme-corner">
+                <label for="theme-toggle">Light mode</label>
+                <input class="switch" type="checkbox" id="theme-toggle" role="switch">
+            </div>
+
+            <form class="auth-form" action="index.html" method="get">
+                <h2>Create Account</h2>
+                <p>Fill in your details to get started.</p>
+
+                <nav aria-label="Account forms">
+                    <ul class="auth-tabs">
+                        <li><a class="tab" href="signin.html">Sign In</a></li>
+                        <li><a class="tab" href="signup.html" aria-current="page">Sign Up</a></li>
+                    </ul>
+                </nav>
+
+                <div class="field">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full_name" placeholder="Enter your full name"
+                        autocomplete="name" minlength="3" required>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email"
+                        required>
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password (8+ characters)"
+                        minlength="8" autocomplete="new-password" required>
+                </div>
+
+                <div class="field">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm_password"
+                        placeholder="Repeat your password" minlength="8" autocomplete="new-password" required>
+                </div>
+
+                <button class="btn" type="submit">Sign Up</button>
+
+                <p class="auth-switch">Already have an account? <a class="text-link" href="signin.html">Sign in</a></p>
+            </form>
+        </main>
+    </div>
+</body>
+
+</html>

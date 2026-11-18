@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard | CryptoVault</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+
+        <!-- leftsidebar -->
+        <aside class="sidebar">
+            <a class="brand" href="index.html" aria-label="CryptoVault home">
+                <span class="brand-mark" aria-hidden="true">CV</span>
+                CryptoVault
+            </a>
+
+            <nav class="nav-group" aria-label="Main menu">
+                <p class="nav-label">Main menu</p>
+                <a class="nav-link" href="index.html" aria-current="page">Dashboard</a>
+                <a class="nav-link" href="#">Markets</a>
+                <a class="nav-link" href="#">Wallet</a>
+            </nav>
+
+            <nav class="nav-group" aria-label="Account">
+                <p class="nav-label">Account</p>
+                <a class="nav-link" href="settings.html">Settings</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="theme-switch">
+                    <label for="theme-toggle">Light mode</label>
+                    <input class="switch" type="checkbox" id="theme-toggle" role="switch">
+                </div>
+                <a class="nav-link logout" href="signin.html">
+                    Logout</a>
+            </div>
+        </aside>
+
+        <div class="content">
+
+            <!-- nav -->
+            <header class="topbar">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Welcome back! Here's your portfolio overview.</p>
+                </div>
+
+                <div class="topbar-tools">
+                    <form class="search" role="search" action="#">
+                        <label class="sr-only" for="search">Search</label>
+                        <input type="search" id="search" name="q" placeholder="Search...">
+                    </form>
+                    <button class="icon-btn" type="button" aria-label="Notifications, 3 unread">
+                        <span aria-hidden="true">🔔</span>
+                        <span class="badge" aria-hidden="true">3</span>
+                    </button>
+                    <a class="user" href="settings.html">
+                        <span class="avatar" aria-hidden="true">AM</span>
+                        <span>
+                            <span class="user-name">Alex Morgan</span>
+                            <span class="user-role">Pro Trader</span>
+                        </span>
+                    </a>
+                </div>
+            </header>
+
+            <main class="dashboard">
+
+                <!-- statistics -->
+                <section class="stats" aria-label="Account statistics">
+                    <article class="card stat stat-hero">
+                        <span class="stat-icon" aria-hidden="true">$</span>
+                        <div>
+                            <p class="stat-label">Total Balance</p>
+                            <p class="stat-value">$84,254.32</p>
+                            <p class="stat-note">+12.5% this month</p>
+                        </div>
+                    </article>
+
+                    <article class="card stat">
+                        <span class="stat-icon" aria-hidden="true">↗</span>
+                        <div>
+                            <p class="stat-label">Total Profit</p>
+                            <p class="stat-value">$12,847.00</p>
+                            <p class="stat-note up">+8.2% vs last week</p>
+                        </div>
+                    </article>
+
+                    <article class="card stat">
+                        <span class="stat-icon" aria-hidden="true">◷</span>
+                        <div>
+                            <p class="stat-label">Pending Orders</p>
+                            <p class="stat-value">7</p>
+                            <p class="stat-note">3 buy, 4 sell</p>
+                        </div>
+                    </article>
+
+                    <article class="card stat">
+                        <span class="stat-icon" aria-hidden="true">◈</span>
+                        <div>
+                            <p class="stat-label">Active Assets</p>
+                            <p class="stat-value">12</p>
+                            <p class="stat-note">Across 4 wallets</p>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- portfolio overview -->
+                <section class="card card-portfolio">
+                    <div class="card-head">
+                        <h2>Portfolio Overview</h2>
+                        <div class="range" role="group" aria-label="Time range">
+                            <button type="button" aria-pressed="true">1D</button>
+                            <button type="button" aria-pressed="false">1W</button>
+                            <button type="button" aria-pressed="false">1M</button>
+                            <button type="button" aria-pressed="false">1Y</button>
+                        </div>
+                    </div>
+                    <svg class="line-chart" viewBox="0 0 300 120" preserveAspectRatio="none" role="img"
+                        aria-label="Portfolio value rising from Monday to Sunday">
+                        <defs>
+                            <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0" stop-color="currentColor" stop-opacity="0.35" />
+                                <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+                        <polygon points="0,95 50,85 100,88 150,62 200,68 250,40 300,25 300,120 0,120"
+                            fill="url(#area)" />
+                        <polyline points="0,95 50,85 100,88 150,62 200,68 250,40 300,25" fill="none"
+                            stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"
+                            vector-effect="non-scaling-stroke" />
+                    </svg>
+                    <p class="days" aria-hidden="true">
+                        <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                    </p>
+                </section>
+
+                <!-- asset performance -->
+                <section class="card card-performance">
+                    <div class="card-head">
+                        <h2>Asset Performance</h2>
+                        <div class="range" role="group" aria-label="Time range">
+                            <button type="button" aria-pressed="true">Week</button>
+                            <button type="button" aria-pressed="false">Month</button>
+                            <button type="button" aria-pressed="false">Year</button>
+                        </div>
+                    </div>
+                    <ul class="bars">
+                        <li><span class="bar" style="--h:78%"></span>BTC</li>
+                        <li><span class="bar" style="--h:62%"></span>ETH</li>
+                        <li><span class="bar neg" style="--h:22%"></span>SOL</li>
+                        <li><span class="bar" style="--h:92%"></span>BNB</li>
+                        <li><span class="bar" style="--h:46%"></span>ADA</li>
+                        <li><span class="bar neg" style="--h:34%"></span>XRP</li>
+                        <li><span class="bar" style="--h:55%"></span>DOT</li>
+                    </ul>
+                </section>
+
+                <!-- BTC/USD -->
+                <section class="card card-btc">
+                    <div class="coin-head">
+                        <h2>BTC/USD</h2>
+                        <p class="price">$43,256.00</p>
+                        <p class="change">+2.34%</p>
+                    </div>
+                    <ul class="candles" aria-label="BTC price movement, trending up">
+                        <li class="candle up" style="--h:45%"></li>
+                        <li class="candle down" style="--h:70%"></li>
+                        <li class="candle up" style="--h:55%"></li>
+                        <li class="candle up" style="--h:85%"></li>
+                        <li class="candle down" style="--h:60%"></li>
+                        <li class="candle up" style="--h:50%"></li>
+                        <li class="candle down" style="--h:75%"></li>
+                        <li class="candle up" style="--h:65%"></li>
+                        <li class="candle up" style="--h:80%"></li>
+                        <li class="candle down" style="--h:55%"></li>
+                        <li class="candle up" style="--h:90%"></li>
+                        <li class="candle up" style="--h:70%"></li>
+                    </ul>
+                </section>
+
+                <!-- ETH/USD -->
+                <section class="card card-eth">
+                    <div class="coin-head">
+                        <h2>ETH/USD</h2>
+                        <p class="price">$2,284.50</p>
+                        <p class="change">+1.87%</p>
+                    </div>
+                    <ul class="candles" aria-label="ETH price movement, trending up">
+                        <li class="candle down" style="--h:60%"></li>
+                        <li class="candle up" style="--h:45%"></li>
+                        <li class="candle down" style="--h:80%"></li>
+                        <li class="candle up" style="--h:55%"></li>
+                        <li class="candle up" style="--h:70%"></li>
+                        <li class="candle down" style="--h:65%"></li>
+                        <li class="candle up" style="--h:50%"></li>
+                        <li class="candle down" style="--h:85%"></li>
+                        <li class="candle up" style="--h:60%"></li>
+                        <li class="candle up" style="--h:75%"></li>
+                        <li class="candle down" style="--h:50%"></li>
+                        <li class="candle up" style="--h:90%"></li>
+                    </ul>
+                </section>
+
+                
+            </main>
+
+            <footer class="page-footer">
+                <p>&copy; Made By Khloud Ahmed.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
