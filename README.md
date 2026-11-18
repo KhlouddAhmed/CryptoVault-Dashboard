@@ -4,13 +4,6 @@ A responsive cryptocurrency dashboard UI built with **only HTML5 and CSS3**. No 
 
 > This is a front-end layout project. All prices, balances and charts are static sample data.
 
-## Screenshots
-
-| Desktop | Tablet | Mobile |
-|---|---|---|
-| ![Desktop dashboard](screenshots/desktop.png) | ![Tablet dashboard](screenshots/tablet.png) | ![Mobile dashboard](screenshots/mobile.png) |
-
-## Pages
 
 | Page | File | Description |
 |---|---|---|
